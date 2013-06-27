@@ -1,0 +1,35 @@
+<% if @user.errors.any? %>
+  <p><%= t("form.error_message") %></p>
+
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @user, url: "/cadastre-se" do |f| %>
+  <p>
+    <%= f.label :name, t("form.labels.user.name") %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :email, t("form.labels.user.email") %>
+    <%= f.email_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :password, t("form.labels.user.password") %>
+    <%= f.password_field :password %>
+  </p>
+
+  <p>
+    <%= f.label :password_confirmation, t("form.labels.user.password_confirmation") %>
+    <%= f.password_field :password_confirmation %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

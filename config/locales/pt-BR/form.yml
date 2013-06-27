@@ -1,0 +1,16 @@
+pt-BR:
+  helpers:
+    submit:
+      user:
+        create: "Quero me cadastrar"
+        update: "Atualizar meus dados"
+
+  form:
+    error_message: "Verifique o formulário antes de continuar:"
+
+    labels:
+      user:
+        name: "Seu nome"
+        email: "Seu e-mail"
+        password: "Sua senha"
+        password_confirmation: "Confirme sua senha"

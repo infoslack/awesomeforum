@@ -6,6 +6,7 @@ gem "mysql2"
 gem "sass-rails"
 gem "uglifier"
 gem "therubyracer", platforms: :ruby
+gem "bcrypt-ruby"
 
 group :development, :test do
   gem "rspec-rails"
