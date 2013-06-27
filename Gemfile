@@ -7,6 +7,7 @@ gem "sass-rails"
 gem "uglifier"
 gem "therubyracer", platforms: :ruby
 gem "bcrypt-ruby"
+gem "rails-i18n"
 
 group :development, :test do
   gem "rspec-rails"
