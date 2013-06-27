@@ -1,0 +1,15 @@
+defaults: &defaults
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /var/run/mysql/mysql.sock
+
+development:
+  <<: *defaults
+  database: hf_development
+
+test:
+  <<: *defaults
+  database: hf_test
