@@ -1,0 +1,12 @@
+<article class="question">
+  <h2>
+    <%= link_to question.title, question_path(question) %>
+  </h2>
+
+  <ul class="meta">
+    <li class="who">
+      <%= render "shared/user", user: question.user %>
+    </li>
+  </ul>
+</article>
+

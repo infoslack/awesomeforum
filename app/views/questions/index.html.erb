@@ -1,2 +1,13 @@
-<%= flash[:notice] %>
-<%= flash[:alert] %>
+<h1><%= t("titles.questions.index") %></h1>
+
+<ul class="filters all">
+  <li class="all">
+    <%= link_to t("question.all_questions") %>
+  </li>
+
+  <li class="unanswered">
+    <%= link_to t("question.unanswered_questions") %>
+  </li>
+</ul>
+
+<%= render @questions %>

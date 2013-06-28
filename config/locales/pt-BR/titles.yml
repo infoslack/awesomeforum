@@ -8,6 +8,7 @@ pt-BR:
 
     questions:
       new: "Faça sua pergunta!"
+      index: "Últimas perguntas"
 
     sidebar:
       recent_users: "Novo no Hackerforum"

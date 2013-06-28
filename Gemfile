@@ -12,10 +12,12 @@ gem "rails-i18n"
 group :development, :test do
   gem "rspec-rails"
   gem "pry-meta"
+  gem "factory_girl"
+  gem "factory_girl-preload"
+  gem "database_cleaner"
+  gem "faker"
 end
 
 group :test do
   gem "capybara"
-  gem "factory_girl"
-  gem "factory_girl-preload"
 end

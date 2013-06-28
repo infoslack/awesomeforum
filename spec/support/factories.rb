@@ -10,6 +10,14 @@ FactoryGirl.define do
     name "Some category"
   end
 
+  factory :question do
+    title "Some title"
+    content "Some content"
+
+    association :user
+    association :category
+  end
+
   preload do
     factory(:john) { create(:user) }
     factory(:ruby) { create(:category) }

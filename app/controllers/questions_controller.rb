@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
   layout :set_layout_file
 
   def index
+    @questions = Question.limit(20).includes(:user, :category)
   end
 
   def new
