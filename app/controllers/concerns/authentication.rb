@@ -19,7 +19,19 @@ module Authentication
   end
 
   def require_logged_user
-    redirect_to login_path,
-      alert: t("flash.require_logged_user") unless logged_in?
+    unless logged_in?
+    redirect_to login_path(return_to: request.fullpath),
+      alert: t("flash.require_logged_user")
+    end
+  end
+
+  def return_url
+    uri = URI.parse(params.fetch(:return_to, root_path))
+    path = uri.path
+    path << "?#{uri.query}" if uri.query
+    path << "##{uri.fragment}" if uri.fragment
+    path
+  rescue URI::InvalidURIError
+    root_path
   end
 end
