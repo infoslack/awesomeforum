@@ -10,7 +10,7 @@
   </ul>
 <% end %>
 
-<%= form_for @user, url: "/cadastre-se" do |f| %>
+<%= form_for @user, url: signup_path do |f| %>
   <p>
     <%= f.label :name, t("form.labels.user.name") %>
     <%= f.text_field :name %>

@@ -1,1 +1,10 @@
-<%= link_to t("menu.signup"), "/cadastre-se" %>
+<%= flash[:notice] %>
+<%= flash[:alert] %>
+
+<% if logged_in? %>
+  <%= t("greeting", name: current_user.name) %>
+  <%= button_to t("menu.logout"), logout_path, method: "delete" %>
+<% else %>
+  <%= link_to t("menu.signup"), signup_path %>
+  <%= link_to t("menu.login"), login_path %>
+<% end %>

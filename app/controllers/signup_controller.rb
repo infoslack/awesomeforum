@@ -1,4 +1,5 @@
 class SignupController < ApplicationController
+  before_action :redirect_logged_users
   def new
     @user = User.new
   end
@@ -7,7 +8,7 @@ class SignupController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to "/entrar", notice: t("flash.signup.create.notice")
+      redirect_to login_path, notice: t("flash.signup.create.notice")
     else
       render :new
     end

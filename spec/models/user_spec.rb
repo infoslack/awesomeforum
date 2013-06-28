@@ -31,12 +31,7 @@ describe User do
     end
 
     it "rejects duplicated emails" do
-      existing = User.create!(
-        name: "John Doe",
-        email: "john@example.org",
-        password: "test",
-        password_confirmation: "test"
-      )
+      existing = users(:john)
       user = User.create(email: existing.email)
       expect(user).to have_at_least(1).error_on(:email)
     end
