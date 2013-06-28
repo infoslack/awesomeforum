@@ -1,14 +1,8 @@
-<% if @question.errors.any? %>
-  <p><%= t("form.error_message") %></p>
-
-  <ul>
-    <% @question.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<h1><%= t("titles.questions.new") %></h1>
 
 <%= form_for @question, url: new_question_path do |f| %>
+  <%= render "shared/form_errors", record: @question %>
+
   <p>
     <%= f.label :title, t("form.labels.question.title") %>
     <%= f.text_field :title %>
@@ -25,7 +19,8 @@
       include_blank: true %>
   </p>
 
-  <p>
+  <p class="submit">
     <%= f.submit %>
+    <%= link_to t("action.back"), root_path %>
   </p>
 <% end %>

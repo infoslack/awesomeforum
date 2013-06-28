@@ -2,7 +2,7 @@
 <html lang="<%= I18n.locale %>" dir="ltr">
   <head>
     <title>Hackerforum</title>
-    <%= stylesheet_link_tag "site", media: "all" %>
+    <%= stylesheet_link_tag "window", media: "all" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -14,16 +14,6 @@
       <section class="main">
         <%= yield %>
       </section>
-
-      <aside class="sidebar">
-        <h1>Busca</h1>
-        <form action="/search">
-          <p>
-            <input type="search" autocomplete results="5">
-            <input type="submit" value="OK">
-          </p>
-        </form>
-      </aside>
     </div>
     <%= javascript_include_tag "application" %>
   </body>

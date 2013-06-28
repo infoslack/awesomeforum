@@ -2,3 +2,9 @@ pt-BR:
   titles:
     signup:
       new: "Cadastre-se!"
+
+    login:
+      new: "Acesse sua conta!"
+
+    questions:
+      new: "Faça sua pergunta!"

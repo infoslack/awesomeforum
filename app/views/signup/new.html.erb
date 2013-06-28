@@ -1,16 +1,12 @@
 <h1><%= t("titles.signup.new") %></h1>
 
-<% if @user.errors.any? %>
-  <p><%= t("form.error_message") %></p>
-
-  <ul>
-    <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<p>
+  <%= t("signup.disclaimer_html", url: login_path) %>
+</p>
 
 <%= form_for @user, url: signup_path do |f| %>
+  <%= render "shared/form_errors", record: @user %>
+
   <p>
     <%= f.label :name, t("form.labels.user.name") %>
     <%= f.text_field :name %>
@@ -31,7 +27,8 @@
     <%= f.password_field :password_confirmation %>
   </p>
 
-  <p>
+  <p class="submit">
     <%= f.submit %>
+    <%= link_to t("action.back"), root_path %>
   </p>
 <% end %>

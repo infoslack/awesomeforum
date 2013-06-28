@@ -1,0 +1,6 @@
+pt-BR:
+  login:
+    disclaimer_html: |
+      Se você já tem uma conta, informe seus dados
+      para fazer o login. Ainda não é cadastrado ?
+      <a href="%{url}">Crie sua conta agora!</a>

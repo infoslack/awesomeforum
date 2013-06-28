@@ -21,7 +21,7 @@ module Authentication
   def require_logged_user
     unless logged_in?
     redirect_to login_path(return_to: request.fullpath),
-      alert: t("flash.require_logged_user")
+      alert: t("flash.require_logged_user.alert")
     end
   end
 

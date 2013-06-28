@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   before_action :require_logged_user, only: %w[ new create ]
   before_action :find_categories, only: %w[ new create ]
+  layout :set_layout_file
 
   def index
   end
@@ -33,5 +34,9 @@ class QuestionsController < ApplicationController
 
   def find_categories
     @categories = Category.all
+  end
+
+  def set_layout_file
+    "window" if %w[create new].include?(action_name)
   end
 end

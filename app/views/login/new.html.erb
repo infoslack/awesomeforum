@@ -1,5 +1,6 @@
-<%= flash[:notice] %>
-<%= flash[:alert] %>
+<h1><%= t("titles.login.new") %></h1>
+
+<p><%= t("login.disclaimer_html", url: signup_path) %></p>
 
 <%= form_tag login_path(return_to: params[:return_to]) do %>
   <p>
@@ -11,7 +12,8 @@
     <%= password_field_tag :password, params[:password] %>
   </p>
 
-  <p>
+  <p class="submit">
     <%= submit_tag t("helpers.submit.login") %>
+    <%= link_to t("action.back"), root_path %>
   </p>
 <% end %>
