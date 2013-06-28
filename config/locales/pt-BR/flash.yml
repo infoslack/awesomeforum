@@ -7,3 +7,10 @@ pt-BR:
     login:
       create:
         alert: "E-mail/senha inválidos."
+
+    questions:
+      create:
+        notice: "Pergunta adicionada com sucesso!"
+
+    require_logged_user:
+      alert: "Você precisa estar logado para acessar esta página."

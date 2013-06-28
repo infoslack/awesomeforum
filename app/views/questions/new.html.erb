@@ -1,0 +1,31 @@
+<% if @question.errors.any? %>
+  <p><%= t("form.error_message") %></p>
+
+  <ul>
+    <% @question.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @question, url: new_question_path do |f| %>
+  <p>
+    <%= f.label :title, t("form.labels.question.title") %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :content, t("form.labels.question.content") %>
+    <%= f.text_area :content %>
+  </p>
+
+  <p>
+    <%= f.label :category_id, t("form.labels.question.category") %>
+    <%= f.collection_select :category_id, @categories, :id, :name,
+      include_blank: true %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

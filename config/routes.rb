@@ -7,4 +7,8 @@ Hackerforum::Application.routes.draw do
   get     "entrar" => "login#new", as: "login"
   post    "entrar" => "login#create", as: false
   delete  "sair"   => "login#destroy", as: "logout"
+
+  get   "perguntar" => "questions#new", as: "new_question"
+  post  "perguntar" => "questions#create", as: false
+  get   "perguntas/:id" => "questions#show", as: "question"
 end

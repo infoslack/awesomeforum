@@ -14,7 +14,12 @@ module Authentication
     current_user.present?
   end
 
-  def redirect_logged_users
-    redirect_to "/" if logged_in?
+  def redirect_logged_user
+    redirect_to root_path if logged_in?
+  end
+
+  def require_logged_user
+    redirect_to login_path,
+      alert: t("flash.require_logged_user") unless logged_in?
   end
 end

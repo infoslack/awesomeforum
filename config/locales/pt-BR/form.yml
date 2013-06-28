@@ -5,6 +5,9 @@ pt-BR:
         create: "Quero me cadastrar"
         update: "Atualizar meus dados"
 
+      question:
+        create: "Enviar minha pergunta"
+
       login: "Acessar minha conta"
 
   form:
@@ -16,3 +19,8 @@ pt-BR:
         email: "Seu e-mail"
         password: "Sua senha"
         password_confirmation: "Confirme sua senha"
+
+      question:
+        title: "Faça sua pergunta"
+        category: "Escolha uma categoria"
+        content: "Descreva sua pergunta (dê exemplos, coloque links, etc)"

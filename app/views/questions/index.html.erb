@@ -1,6 +1,8 @@
 <%= flash[:notice] %>
 <%= flash[:alert] %>
 
+<%= link_to t("menu.ask"), new_question_path %>
+
 <% if logged_in? %>
   <%= t("greeting", name: current_user.name) %>
   <%= button_to t("menu.logout"), logout_path, method: "delete" %>
