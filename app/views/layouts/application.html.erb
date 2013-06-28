@@ -16,13 +16,7 @@
       </section>
 
       <aside class="sidebar">
-        <h1>Busca</h1>
-        <form action="/search">
-          <p>
-            <input type="search" autocomplete results="5">
-            <input type="submit" value="OK">
-          </p>
-        </form>
+        <%= render "shared/sidebar/recent_users" %>
       </aside>
     </div>
     <%= javascript_include_tag "application" %>

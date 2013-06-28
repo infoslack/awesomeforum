@@ -1,0 +1,9 @@
+<h1><%= t("titles.sidebar.recent_users") %></h1>
+
+<ul class="users list">
+  <% recent_users.each do |user| %>
+    <li>
+      <%= render "shared/user", user: user %>
+    </li>
+  <% end %>
+</ul>
