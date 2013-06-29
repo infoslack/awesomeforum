@@ -12,5 +12,9 @@ pt-BR:
       create:
         notice: "Pergunta adicionada com sucesso!"
 
+    answers:
+      create:
+        notice: "Pergunta respondida com sucesso!"
+
     require_logged_user:
       alert: "Você precisa estar logado para acessar esta página."

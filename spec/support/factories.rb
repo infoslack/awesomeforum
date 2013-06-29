@@ -21,5 +21,11 @@ FactoryGirl.define do
   preload do
     factory(:john) { create(:user) }
     factory(:ruby) { create(:category) }
+    factory(:ruby) {
+      create(:question,
+        user: users(:john),
+        category: categories(:ruby)
+      )
+    }
   end
 end

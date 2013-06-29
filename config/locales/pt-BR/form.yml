@@ -8,6 +8,9 @@ pt-BR:
       question:
         create: "Enviar minha pergunta"
 
+      answer:
+        create: "Envie sua resposta"
+
       login: "Acessar minha conta"
 
   form:
@@ -24,3 +27,6 @@ pt-BR:
         title: "Faça sua pergunta"
         category: "Escolha uma categoria"
         content: "Descreva sua pergunta (dê exemplos, coloque links, etc)"
+
+      answer:
+        content: "Mande sua resposta"

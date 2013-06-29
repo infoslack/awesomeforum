@@ -1,0 +1,4 @@
+pt-BR:
+  time_ago:
+    Question: "perguntou há %{time}"
+    Answer: "respondeu há %{time}"

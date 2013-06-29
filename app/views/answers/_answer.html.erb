@@ -1,0 +1,7 @@
+<article class="answer">
+    <p class="about">
+      <%= render "shared/record_meta", record: answer %>
+    </p>
+
+    <%= simple_format strip_tags(answer.content) %>
+</article>

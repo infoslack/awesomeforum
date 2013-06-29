@@ -2,3 +2,9 @@ pt-BR:
   question:
     all_questions: "Todas"
     unanswered_questions: "Não respondidas"
+    asked_time_ago: "perguntou há %{time}"
+
+    answers_count:
+      zero: "Nenhuma resposta"
+      one: "1 resposta"
+      other: "%{count} respostas"

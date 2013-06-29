@@ -12,5 +12,7 @@ Hackerforum::Application.routes.draw do
   post  "perguntar" => "questions#create", as: false
   get   "perguntas/:id" => "questions#show", as: "question"
 
+  post  "perguntas/:question_id/respostas" => "answers#create", as: "new_answer"
+
   get   "u/:id" => "users#path", as: "user"
 end

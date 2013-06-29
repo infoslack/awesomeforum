@@ -1,1 +1,12 @@
-<%= flash[:notice] %>
+<div class="question-details">
+  <h1><%= @question.title %></h1>
+
+  <%= simple_format strip_tags(@question.content)  %>
+
+  <p class="about">
+    <%= render "shared/record_meta", record: @question %>
+  </p>
+</div>
+
+<%= render "answers", answers: @answers %>
+<%= render "answers/form", question: @question  %>

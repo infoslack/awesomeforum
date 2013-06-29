@@ -1,0 +1,10 @@
+<%= form_for Answer.new, url: new_answer_path(question) do |f| %>
+  <p>
+    <%= f.label :content, t("form.labels.answer.content") %>
+    <%= f.text_area :content %>
+  </p>
+
+  <p class="submit">
+    <%= f.submit %>
+  </p>
+<% end %>

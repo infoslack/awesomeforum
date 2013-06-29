@@ -1,0 +1,8 @@
+<%= render "shared/user", user: record.user %>
+
+<time datetime="<%= record.created_at.xmlschema %>">
+  <%= t(record.class.name,
+    scope: "time_ago",
+    time: time_ago_in_words(record.created_at)
+  )%>
+</time>
