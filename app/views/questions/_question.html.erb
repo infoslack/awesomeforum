@@ -7,6 +7,10 @@
     <li class="who">
       <%= render "shared/record_meta", record: question %>
     </li>
+
+    <li class="answers icon">
+      <%= t("question.answers_count_html", count: question.answers_count) %>
+    </li>
   </ul>
 </article>
 

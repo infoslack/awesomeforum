@@ -43,3 +43,14 @@ questions = []
     content: Faker::Lorem.paragraphs([*1..6].sample).join("\n\n")
   )
 end
+
+# create answers
+answers = []
+
+100.times do
+  answers << create(:answer,
+    user: users.sample,
+    question: questions.sample,
+    content: Faker::Lorem.paragraphs([*1..4].sample).join("\n\n")
+  )
+end

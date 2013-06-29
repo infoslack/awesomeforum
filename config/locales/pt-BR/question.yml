@@ -8,3 +8,8 @@ pt-BR:
       zero: "Nenhuma resposta"
       one: "1 resposta"
       other: "%{count} respostas"
+
+    answers_count_html:
+      zero: "nenhuma resposta"
+      one: "1 <span>resposta</span>"
+      other: "%{count} <span>respostas</span>"

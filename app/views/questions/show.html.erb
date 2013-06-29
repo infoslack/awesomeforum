@@ -8,5 +8,6 @@
   </p>
 </div>
 
-<%= render "answers", answers: @answers %>
+<%= render "answers", answers: @answers,
+  answers_count: @question.answers_count %>
 <%= render "answers/form", question: @question  %>
