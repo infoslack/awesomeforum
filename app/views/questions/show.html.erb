@@ -10,4 +10,12 @@
 
 <%= render "answers", answers: @answers,
   answers_count: @question.answers_count %>
-<%= render "answers/form", question: @question  %>
+
+<% if logged_in? %>
+  <%= render "answers/form", question: @question  %>
+<% else %>
+  <p class="disclaimer">
+    <%= t("question.must_be_logged_to_answer_html", url:
+      login_path(return_to: question_path(@question))) %>
+  </p>
+<% end %>

@@ -3,6 +3,10 @@ pt-BR:
     all_questions: "Todas"
     unanswered_questions: "Não respondidas"
     asked_time_ago: "perguntou há %{time}"
+    must_be_logged_to_answer_html: |
+      Você precisa
+      <a href="%{url}">estar logado</a>
+      para responder.
 
     answers_count:
       zero: "Nenhuma resposta"
