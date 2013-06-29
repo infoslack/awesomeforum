@@ -13,3 +13,7 @@ pt-BR:
       zero: "nenhuma resposta"
       one: "1 <span>resposta</span>"
       other: "%{count} <span>respostas</span>"
+
+    hits_count_html:
+      one: "1 <span>visita</span>"
+      other: "%{count} <span>visitas</span>"

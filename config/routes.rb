@@ -14,5 +14,7 @@ Hackerforum::Application.routes.draw do
 
   post  "perguntas/:question_id/respostas" => "answers#create", as: "new_answer"
 
+  get   "categorias/:id" => "categories#show", as: "category"
+
   get   "u/:id" => "users#path", as: "user"
 end

@@ -4,4 +4,8 @@ class Question < ActiveRecord::Base
   has_many :answers
 
   validates_presence_of :title, :content, :user, :category
+
+  def hit!
+    increment! :hits
+  end
 end

@@ -11,3 +11,10 @@ pt-BR:
         title: "Título"
         content: "Conteúdo"
         category: "Categoria"
+
+      answer:
+        content: "Resposta"
+
+    errors:
+      messages:
+        too_short: "precisa ter ao menos %{count} caracteres"

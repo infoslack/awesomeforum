@@ -8,6 +8,10 @@
       <%= render "shared/record_meta", record: question %>
     </li>
 
+    <li class="views icon">
+      <%= t("question.hits_count_html", count: question.hits) %>
+    </li>
+
     <li class="answers icon">
       <%= t("question.answers_count_html", count: question.answers_count) %>
     </li>

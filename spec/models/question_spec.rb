@@ -22,4 +22,12 @@ describe Question do
       expect(question).to have_at_least(1).error_on(:category)
     end
   end
+
+  it "updates the hits count" do
+    question = questions(:ruby)
+
+    expect {
+      question.hit!
+    }.to change { question.reload.hits }.by(1)
+  end
 end

@@ -6,10 +6,16 @@ class AnswersController < ApplicationController
     answer = current_user.answers.new(
       answer_params.merge(question: question)
     )
-    answer.save
 
-    redirect_to question_path(question),
-      notice: t("flash.answers.create.notice")
+    if answer.save
+      options = { notice: t("flash.answers.create.notice") }
+    else
+      options = {
+        alert: answer.errors.full_messages.to_sentence.capitalize
+      }
+    end
+
+    redirect_to question_path(question), options
   end
 
   private
