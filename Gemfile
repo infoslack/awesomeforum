@@ -6,6 +6,7 @@ gem "mysql2"
 gem "bcrypt-ruby"
 gem "rails-i18n"
 gem "paginate"
+gem "tire"
 
 gem "sass-rails"
 gem "uglifier"

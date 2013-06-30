@@ -13,6 +13,8 @@ Hackerforum::Application.routes.draw do
   get   "perguntas/:id/feed" => "questions#feed", as: "question_feed", format: "xml"
   get   "perguntas/:id" => "questions#show", as: "question"
 
+  get   "busca" => "questions#search", as: "search"
+
   post  "perguntas/:question_id/respostas" => "answers#create", as: "new_answer"
 
   get   "categorias/:id" => "categories#show", as: "category"

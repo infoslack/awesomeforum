@@ -14,6 +14,15 @@ class QuestionsController < ApplicationController
       .limit(10)
   end
 
+#TODO: - Refactory
+  def search
+    if params[:query].blank?
+      redirect_to root_path, alert: "Campo busca não pode ficar em branco!"
+    else
+      @questions = QuestionSearch.search(params[:query], params)
+    end
+  end
+
   def new
     @question = Question.new
   end

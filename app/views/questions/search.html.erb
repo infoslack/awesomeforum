@@ -1,0 +1,22 @@
+<!-- TODO: Refactory -->
+<h1><%= t("titles.questions.search") %></h1>
+
+<% if @questions.count.zero? %>
+  <p>
+    Sua busca por <strong class="highlight"><%= params[:query] %></strong>
+    não retornou nenhum resultado.
+  </p>
+<% else %>
+  <p>
+    Sua busca por <strong class="higlight"><%= params[:query] %></strong>
+    retornou os seguintes resultados:
+  </p>
+  <%= render @questions, paginate: true %>
+  <%= paginate @questions %>
+<% end %>
+
+<% content_for :sidebar do %>
+  <%= render "shared/sidebar/search" %>
+  <%= render "shared/sidebar/categories" %>
+  <%= render "shared/sidebar/recent_users" %>
+<% end %>
