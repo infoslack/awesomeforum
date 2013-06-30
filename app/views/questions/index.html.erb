@@ -12,3 +12,9 @@
 
 <%= render @questions %>
 <%= paginate @questions %>
+
+<% content_for :sidebar do %>
+  <%= render "shared/sidebar/search" %>
+  <%= render "shared/sidebar/categories" %>
+  <%= render "shared/sidebar/recent_users" %>
+<% end %>

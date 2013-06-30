@@ -303,17 +303,23 @@ div.answers {
   overflow: hidden;
 }
 
-.question-info strong {
-  color: #202020;
-  display: block;
-  font-size: 24px;
+.question-info {
   letter-spacing: -1px;
   margin-bottom: -5px;
 }
 
+.question-info span {
+  font-weight: normal;
+  font-size: 12px;
+  display: block;
+  color: #777;
+}
+
 .question-info li {
   float: left;
-  font-size: 12px;
+  color: #202020;
+  font-size: 24px;
+  font-weight: bold;
   margin-right: 20px;
 }
 
@@ -326,7 +332,7 @@ div.answers {
 }
 
 .question-info .feed a {
-  background: image-url("feed.png") no-repeat;
+  background: image-url("feed.png");
   display: block;
   height: 48px;
   width: 48px;

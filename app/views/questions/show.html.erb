@@ -19,3 +19,8 @@
       login_path(return_to: question_path(@question))) %>
   </p>
 <% end %>
+
+<% content_for :sidebar do %>
+  <%= render "sidebar", question: @question %>
+  <%= render "shared/sidebar/search" %>
+<% end %>

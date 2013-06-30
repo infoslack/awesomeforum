@@ -1,0 +1,4 @@
+pt-BR:
+  answer:
+    feed:
+      replied: "%{name} respondeu:"

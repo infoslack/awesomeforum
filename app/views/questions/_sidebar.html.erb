@@ -1,0 +1,13 @@
+<ul class="question-info">
+  <li>
+    <%= t("question.hits_count_html", count: question.hits) %>
+  </li>
+
+  <li>
+    <%= t("question.answers_count_html", count: question.answers_count) %>
+  </li>
+
+  <li class="feed">
+    <%= link_to "RSS", question_feed_path(question) %>
+  </li>
+</ul>

@@ -9,6 +9,13 @@ class QuestionsController < ApplicationController
       .includes(:user, :category)
   end
 
+  def feed
+    @question = Question.find(params[:id])
+    @answers = @question.answers
+      .order("created_at desc")
+      .limit(10)
+  end
+
   def new
     @question = Question.new
   end
