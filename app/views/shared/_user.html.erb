@@ -1,4 +1,8 @@
 <%= link_to user_path(user), class: "user" do %>
-  <%= image_tag("avatar.jpg", class: "avatar") %>
+  <%=
+    hash = Digest::MD5.hexdigest(user.email)
+    image_tag("http://gravatar.com/avatar/#{hash}?s=50&d=mm",
+    alt: user.name, class: "avatar")
+  %>
   <span class="name"><%= user.name %></span>
 <% end %>
