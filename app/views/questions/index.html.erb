@@ -1,12 +1,14 @@
 <h1><%= t("titles.questions.index") %></h1>
 
-<ul class="filters all">
+<ul class="filters <%= params.fetch(:filter, "all") %>">
   <li class="all">
-    <%= link_to t("question.all_questions") %>
+    <%= link_to t("question.all_questions"), root_path %>
   </li>
 
   <li class="unanswered">
-    <%= link_to t("question.unanswered_questions") %>
+    <%= link_to t("question.unanswered_questions"),
+      root_path(filter: "unanswered")
+    %>
   </li>
 </ul>
 

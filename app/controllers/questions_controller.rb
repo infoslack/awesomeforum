@@ -4,9 +4,7 @@ class QuestionsController < ApplicationController
   layout :set_layout_file
 
   def index
-    @questions = Question
-      .paginate(params[:p])
-      .includes(:user, :category)
+    @questions = QuestionFilter.filter(params)
   end
 
   def feed
