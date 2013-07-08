@@ -12,6 +12,10 @@ gem "sass-rails"
 gem "uglifier"
 gem "therubyracer", platforms: :ruby
 
+group :production do
+  gem "puma"
+end
+
 group :development, :test do
   gem "rspec-rails"
   gem "pry-meta"
@@ -19,6 +23,7 @@ group :development, :test do
   gem "factory_girl-preload"
   gem "database_cleaner"
   gem "faker"
+  gem "thin"
 end
 
 group :test do
