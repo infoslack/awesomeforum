@@ -12,4 +12,5 @@ pt-BR:
       search: "Busca"
 
     sidebar:
-      recent_users: "Novo no Hackerforum"
+      recent_users: "Novo no Fórum"
+      categories: "Categorias"

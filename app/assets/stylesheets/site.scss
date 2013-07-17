@@ -13,7 +13,7 @@ h1 + p {
 }
 
 .content {
-  background: #fff image-url("sidebar-bg.png") repeat-y top right;
+  background: #fff image-url("sidebar-bg.png") repeat-y top left;
 }
 
 .main {
@@ -23,7 +23,7 @@ h1 + p {
 
 .main,
 .sidebar {
-  float: left;
+  float: right;
 }
 
 .sidebar {
@@ -440,6 +440,7 @@ input[type=search] + input {
 .account-info {
   border-left: 1px solid #888;
   padding-left: 10px;
+  color: #EAEFF3;
 }
 
 .disclaimer {
