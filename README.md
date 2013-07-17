@@ -19,7 +19,7 @@ Require:
 
 Install and run:
 
-      git clone git@github.com:infoslack/awesomeforum
+      git clone git@github.com:infoslack/awesomeforum.git
       rename config/database.sample.yml to config/database.yml
       bundle install
       rake db:create && rake db:migrate
