@@ -1,4 +1,4 @@
-Hackerforum::Application.routes.draw do
+Awesomeforum::Application.routes.draw do
   root to: "questions#index"
 
   get   "cadastre-se" => "signup#new", as: "signup"

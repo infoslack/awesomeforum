@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Hackerforum::Application.load_tasks
+Awesomeforum::Application.load_tasks

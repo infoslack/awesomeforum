@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Hackerforum::Application.config.secret_key_base = '9d79c640d9698d4f5e23def76078df4053a9a7b2f5f8d08fe911463e5eda1ac0c91e23a254413f19a3c9a547026a4ad671e3cf1333ca6f5a6ff5abc4162e436a'
+Awesomeforum::Application.config.secret_key_base = '9d79c640d9698d4f5e23def76078df4053a9a7b2f5f8d08fe911463e5eda1ac0c91e23a254413f19a3c9a547026a4ad671e3cf1333ca6f5a6ff5abc4162e436a'
