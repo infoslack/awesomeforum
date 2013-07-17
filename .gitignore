@@ -11,3 +11,4 @@
 
 # Ignore schema.rb
 /db/schema.rb
+/config/database.yml
