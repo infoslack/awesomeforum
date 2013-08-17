@@ -1,5 +1,5 @@
 #Awesomeforum
-
+[![endorse](https://api.coderwall.com/infoslack/endorsecount.png)](https://coderwall.com/infoslack)
 ###This is a simple forum application in Ruby on Rails 4
 
 Features:
